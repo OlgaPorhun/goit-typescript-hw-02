@@ -1,0 +1,15 @@
+.errorMessage {
+  color: #ff4d4d;
+  background-color: #ffe6e6;
+  border: 1px solid #ff4d4d;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.noResultsMessage {
+  color: #333;
+  background-color: transparent;
+  padding: 10px;
+  margin-top: 10px;
+}
