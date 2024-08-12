@@ -10,6 +10,10 @@ import toast, { Toaster } from "react-hot-toast";
 import styles from "./App.module.css";
 import { Image } from "./types";
 
+interface ResponseData {
+  results: Image[];
+}
+
 const ACCESS_KEY = "Bh7-pBHEGMq9gOxGIRpWSN21CtNDohx5ywUnBlnx3Xw";
 
 const App: React.FC = () => {
@@ -31,7 +35,7 @@ const App: React.FC = () => {
       setError(null);
 
       try {
-        const response = await axios.get(
+        const response = await axios.get<ResponseData>(
           "https://api.unsplash.com/search/photos",
           {
             params: {
